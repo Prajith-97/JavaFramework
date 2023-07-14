@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 import pageObjects.loginPage;
 import utility.generateLog;
 import utility.readDataFromJson;
@@ -27,8 +28,15 @@ public class test_login {
         }
 
         public static void enterUsername(String username){
-            WebElement element = driver.findElement(By.xpath(loginPage.textBox_userName));
-            element.sendKeys(username);
+            try {
+                WebElement element = driver.findElement(By.xpath(loginPage.textBox_userName));
+                element.sendKeys(username);
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+
         }
 
         public static void enterPassword(String password){
@@ -49,6 +57,14 @@ public class test_login {
             driver.findElement(By.xpath(loginPage.textBox_userName)).sendKeys(username);
             driver.findElement(By.xpath(loginPage.textBox_password)).sendKeys(password);
         }
+
+//        public static  void invalidUsername(String username){
+//            driver.findElement(By.xpath(loginPage.textBox_userName)).sendKeys(username);
+//        }
+//
+//       public static  void invalidPassword(String password){
+//        driver.findElement(By.xpath(loginPage.textBox_userName)).sendKeys(password);
+//       }
 }
 
 

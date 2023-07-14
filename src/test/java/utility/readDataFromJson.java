@@ -15,8 +15,7 @@ public class readDataFromJson {
             JSONObject jsonObj = (JSONObject) jsonParse.parse(new FileReader("C:\\JavaIntellij\\Framework\\src\\test\\resources\\browserDetails.json"));
             //reading values
             return (String) jsonObj.get(key);
-
-        }
+    }
 
     }
 

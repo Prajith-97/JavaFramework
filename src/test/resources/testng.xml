@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="username" value="standard_use"/>
-    <parameter name="password" value="secret_sauce"/>
+    <parameter name="browser-name" value="chrome"/>
+    <parameter name="password" value="secret"/>
     <test name="Login">
        <classes>
-           <class name="glueCode.test_productlistingPage"/>
+           <class name="runner.testRunner"/>
        </classes>
     </test>
 </suite>
